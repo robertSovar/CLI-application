@@ -14,6 +14,7 @@ async function listContacts() {
   try {
     const data = await fs.readFile(contactsPath, { encoding: "utf8" });
     const contacts = JSON.parse(data);
+    console.table(contacts);
   } catch (error) {
     console.log("There was an error".bgRed.white);
     console.error(error);
