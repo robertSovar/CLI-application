@@ -72,7 +72,7 @@ async function addContact(name, email, phone) {
     contacts.push(newContact);
 
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-
+    console.table(contacts);
     console.log("The contact was created succesfully".bgGreen);
   } catch (error) {
     console.log("There was an error".bgRed.white);
